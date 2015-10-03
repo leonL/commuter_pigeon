@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'commutes#new'
 
+  resources :road_restrictions
+
   resources :commutes
 
   # The priority is based upon order of creation: first created -> highest priority.
