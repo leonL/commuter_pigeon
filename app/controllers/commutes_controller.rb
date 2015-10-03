@@ -12,12 +12,12 @@ class CommutesController < ApplicationController
         lines.each do |line|
           start = line['start']
           terminus = line['end']
-          RouteStep.create(geom: "LINESTRING(#{start['H']} #{start['L']}, #{terminus['H']} #{terminus['L']})")
+          RouteStep.create(coord: "LINESTRING(#{start['H']} #{start['L']}, #{terminus['H']} #{terminus['L']})")
         end
+        head :ok
       end
 
     end
   end
 
 end
-
