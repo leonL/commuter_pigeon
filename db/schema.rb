@@ -11,17 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151003234724) do
+ActiveRecord::Schema.define(version: 20151004165435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "postgis"
 
   create_table "commuters", force: :cascade do |t|
-    t.string  "name"
-    t.string  "email_address"
-    t.integer "SMS_number"
-    t.string  "twitter_handle"
+    t.string "name"
+    t.string "email_address"
+    t.string "SMS_number"
+    t.string "twitter_handle"
+    t.string "sms_provider"
   end
 
   create_table "commutes", force: :cascade do |t|

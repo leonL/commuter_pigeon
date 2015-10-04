@@ -23,6 +23,7 @@ private
       affected_commutes = affected_steps.map(&:commute).uniq!
       affected_commutes.each do |commute|
         CommuterMailer.commute_news_email(commute, @restriction).deliver_now
+        CommuterMailer.commute_news_text(commute, @restriction).deliver_now
       end
     end
   end
