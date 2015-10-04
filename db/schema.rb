@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20151003234724) do
   end
 
   create_table "route_steps", force: :cascade do |t|
-    t.integer  "route_id"
+    t.integer  "commute_id"
     t.geometry "coord",          limit: {:srid=>4326, :type=>"line_string"}
     t.integer  "sequence_index"
   end

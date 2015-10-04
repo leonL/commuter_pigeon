@@ -1,5 +1,6 @@
 class Commute < ActiveRecord::Base
 
-  has_many :route_steps
+  belongs_to :commuter
 
+  has_many :route_steps
 end
